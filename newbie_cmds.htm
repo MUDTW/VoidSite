@@ -1,0 +1,1007 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>newbie_cmds</title>
+<style>
+<!--
+.left {	border: 1px dashed #999999;
+}
+.style1 {	font-size: x-large;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #CCCCCC;
+}
+-->
+</style>
+</head>
+
+<body text="#FFFFFF" bgcolor="#000000">
+
+<div align="center">
+<div align="center">
+	　</div>
+	<table border="2" width="800" id="table7" bordercolorlight="#666699">
+	<tr>
+		<td><b><font size="4" face="Verdana" color="#99CCFF">○</font></b></td>
+		<td align="left" colspan="3">
+		<p align="left"><b><font size="4" face="Verdana" color="#99CCFF">&nbsp;移動指令</font></b></td>
+	</tr>
+	<tr>
+		<td width="19" height="300" rowspan="13">
+		<div align="center">
+			　</div>
+		</td>
+		<td width="112"><b><font color="#FF0000" face="Verdana" size="2">指令</font></b></td>
+		<td><b><font face="Verdana" color="#FF0000" size="2">使用格式</font></b></td>
+		<td><b><font face="Verdana" color="#FF0000" size="2">說明</font></b></td>
+	</tr>
+	<tr>
+		<td width="112"><font color="#C0C0C0" face="Verdana" size="2">north</font></td>
+		<td width="200"><font color="#C0C0C0" face="Verdana" size="2">north</font></td>
+		<td width="439"><font face="Verdana" color="#C0C0C0" size="2">用來移動向特定的方向。</font></td>
+	</tr>
+	<tr>
+		<td width="112"><font color="#C0C0C0" face="Verdana" size="2">south</font></td>
+		<td width="200"><font color="#C0C0C0" face="Verdana" size="2">south</font></td>
+		<td width="439"><font face="Verdana" color="#C0C0C0" size="2">用來移動向特定的方向。</font></td>
+	</tr>
+	<tr>
+		<td width="112"><font color="#C0C0C0" face="Verdana" size="2">east</font></td>
+		<td width="200"><font color="#C0C0C0" face="Verdana" size="2">east</font></td>
+		<td width="439"><font face="Verdana" color="#C0C0C0" size="2">用來移動向特定的方向。</font></td>
+	</tr>
+	<tr>
+		<td width="112"><font color="#C0C0C0" face="Verdana" size="2">west</font></td>
+		<td width="200"><font color="#C0C0C0" face="Verdana" size="2">west</font></td>
+		<td width="439"><font face="Verdana" color="#C0C0C0" size="2">用來移動向特定的方向。</font></td>
+	</tr>
+	<tr>
+		<td width="112"><font color="#C0C0C0" face="Verdana" size="2">up</font></td>
+		<td width="200"><font color="#C0C0C0" face="Verdana" size="2">up</font></td>
+		<td width="439"><font face="Verdana" color="#C0C0C0" size="2">用來移動向特定的方向。</font></td>
+	</tr>
+	<tr>
+		<td width="112"><font color="#C0C0C0" face="Verdana" size="2">down</font></td>
+		<td width="200"><font color="#C0C0C0" face="Verdana" size="2">down</font></td>
+		<td width="439"><font face="Verdana" color="#C0C0C0" size="2">用來移動向特定的方向。</font></td>
+	</tr>
+	<tr>
+		<td width="112"><font face="Verdana" color="#C0C0C0" size="2">exits</font></td>
+		<td width="200"><font face="Verdana" color="#C0C0C0" size="2">exits</font></td>
+		<td width="439"><font face="Verdana" color="#C0C0C0" size="2">
+		這個指令告訴玩家目前所在的房間有那些明顯的出口。有些出口並不明顯。 <br>
+		玩家可以每個方向都走看看，有時會「撞」 見隱藏的出口。</font></td>
+	</tr>
+	<tr>
+		<td width="112"><font face="Verdana" color="#C0C0C0" size="2">recall</font></td>
+		<td width="200"><font face="Verdana" color="#C0C0C0" size="2">recall</font></td>
+		<td width="439"><font face="Verdana" color="#C0C0C0" size="2">
+		1.向天神祈禱，花費掉你一半的移動力請萬能的神將你傳送回風采之都。可以用簡寫為「/」。</font><p>
+		<font face="Verdana" color="#C0C0C0" size="2">2.若是在戰鬥中使用，將會損失比 flee 
+		更多的經驗值，而且你失敗的機會將會加大。<br>
+		<br>
+		3.在特定的房間中將會失效。若是被施了詛咒術(curse)也無法使用。</font></td>
+	</tr>
+	<tr>
+		<td width="112"><font face="Verdana" color="#C0C0C0" size="2">sleep</font></td>
+		<td width="200"><font face="Verdana" color="#C0C0C0" size="2">sleep</font></td>
+		<td width="439"><font face="Verdana" color="#C0C0C0" size="2">
+		改變角色姿勢，於睡眠狀態時，生命點數，法力，行動力恢復速度較快。 但一旦發生戰鬥也較易受傷。 睡覺時不會知道周圍發生什麼事。</font></td>
+	</tr>
+	<tr>
+		<td width="112"><font face="Verdana" color="#C0C0C0" size="2">rest</font></td>
+		<td width="200"><font face="Verdana" color="#C0C0C0" size="2">rest</font></td>
+		<td width="439"><font face="Verdana" color="#C0C0C0" size="2">
+		改變角色姿勢，於休息狀態時，生命點數，法力，行動力恢復速度較快。 但一旦發生戰鬥也較易受傷。 但恢復速度較 Sleep 慢。</font></td>
+	</tr>
+	<tr>
+		<td width="112"><font face="Verdana" color="#C0C0C0" size="2">wake</font></td>
+		<td width="200"><font face="Verdana" color="#C0C0C0" size="2">wake</font><p>
+		<font face="Verdana" color="#C0C0C0" size="2">wake [victim]</font></td>
+		<td><font face="Verdana" color="#C0C0C0" size="2">改變為站立姿勢。</font><p>
+		<font face="Verdana" color="#C0C0C0" size="2">叫醒某人。</font></td>
+	</tr>
+	<tr>
+		<td width="112"><font face="Verdana" color="#C0C0C0" size="2">stand</font></td>
+		<td width="200"><font face="Verdana" color="#C0C0C0" size="2">stand</font></td>
+		<td><font face="Verdana" color="#C0C0C0" size="2">改變為站立姿勢。</font></td>
+	</tr>
+	</table>
+	<p>　</p>
+	<table border="2" width="800" id="table8" bordercolorlight="#666699">
+	<tr>
+		<td><b><font size="4" face="Verdana" color="#99CCFF">○</font></b></td>
+		<td align="left" colspan="3">
+		<p align="left"><b><font size="4" face="Verdana" color="#99CCFF">&nbsp;團體指令</font></b></td>
+	</tr>
+	<tr>
+		<td width="19" height="300" rowspan="5">
+		<div align="center">
+			　</div>
+		</td>
+		<td width="111" height="20"><b>
+		<font color="#FF0000" face="Verdana" size="2">指令</font></b></td>
+		<td height="20"><b><font face="Verdana" color="#FF0000" size="2">使用格式</font></b></td>
+		<td height="20"><b><font face="Verdana" color="#FF0000" size="2">說明</font></b></td>
+	</tr>
+	<tr>
+		<td width="111"><font color="#C0C0C0" face="Verdana" size="2">follow</font></td>
+		<td width="201"><font color="#C0C0C0" face="Verdana" size="2">follow [victim]</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">follow self</font></td>
+		<td width="439"><font color="#C0C0C0" face="Verdana" size="2">讓你開始去跟隨一個角色。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">讓你不再跟隨他人。</font></td>
+	</tr>
+	<tr>
+		<td width="111"><font color="#C0C0C0" face="Verdana" size="2">group</font></td>
+		<td width="201"><font color="#C0C0C0" face="Verdana" size="2">group</font><p>　</p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">group [victim]</font></p>
+		<p>　</p>
+		<p>　</p>
+		<p>　</td>
+		<td width="439"><font color="#C0C0C0" face="Verdana" size="2">顯示出你隊伍中每一個人的各項數值。</font><p>　</p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">
+		1.讓跟隨你的角色成為你隊伍裡的一員，這個隊伍裡的每一個成員共享經驗值、戰功，並且可以使用 gtell 和 spilt 等指令。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">2.若是團體中的一員發動攻擊，則你也會開始攻擊。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">3.若是 [victim] 已經是隊伍中的一員，那麼 group 
+		[victim] 將會把他踢出你隊伍，在隊伍中的玩家也可以用 follow 來離開隊伍。</font></td>
+	</tr>
+	<tr>
+		<td width="111"><font color="#C0C0C0" face="Verdana" size="2">gtell</font></td>
+		<td width="201"><font color="#C0C0C0" face="Verdana" size="2">gtell [message]</font></td>
+		<td width="439"><font color="#C0C0C0" face="Verdana" size="2">
+		發送訊息給所有隊友，不論他們在那裡，狀態是否為睡覺、昏迷、或在死亡邊緣都可以接收到。可以簡寫為「;」。</font></td>
+	</tr>
+	<tr>
+		<td width="111"><font color="#C0C0C0" face="Verdana" size="2">split</font></td>
+		<td width="201"><font color="#C0C0C0" face="Verdana" size="2">split [amount]</font></td>
+		<td width="439"><font color="#C0C0C0" face="Verdana" size="2">
+		這個指令將會把特定數目的錢，拿來和你隊伍中的玩家們平分，但是只限定跟你在同一個房間內的隊員。 這指令通常是用在戰鬥之後大家來分夥。</font></td>
+	</tr>
+	</table>
+	<p>　</p>
+	<table border="2" width="800" id="table9" bordercolorlight="#666699">
+	<tr>
+		<td><b><font size="4" face="Verdana" color="#99CCFF">○</font></b></td>
+		<td align="left" colspan="3">
+		<p align="left"><b><font size="4" face="Verdana" color="#99CCFF">&nbsp;物品指令</font></b></td>
+	</tr>
+	<tr>
+		<td width="19" height="300" rowspan="37">
+		<div align="center">
+			　</div>
+		</td>
+		<td width="113" height="20"><b>
+		<font color="#FF0000" face="Verdana" size="2">指令</font></b></td>
+		<td height="20"><b><font face="Verdana" color="#FF0000" size="2">使用格式</font></b></td>
+		<td height="20"><b><font face="Verdana" color="#FF0000" size="2">說明</font></b></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">get</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">get [object]</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">get [object] [container]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">拿起在地上的物品。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">拿起在放在容器或是屍體中的物品。 </font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">take</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">take [object]</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">take [object] [container]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">拿起在地上的物品。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">拿起在放在容器或是屍體中的物品。 </font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">put</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">put [object] 
+		[container]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">將物品放入容器中。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">drop</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">drop [object]</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">drop [amount] coins</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">將裝備丟在地上。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">將一定數量的金錢丟在地上。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">give</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">give [object] 
+		[victim]<br>
+		give [amount] coins [victim]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">將裝備給予他人。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">將一定數量的金錢給予他人。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">sacrifice</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">sacrifice [object]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">
+		貢獻一樣物品給天神，天神將會予你一美拉的獎勵。<br>
+　</font><p><font color="#C0C0C0" face="Verdana" size="2">【註】若是習有法力加持(manamaster)，可機率性地於奉獻屍體後回復部分法力。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">wear</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">wear [object]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">裝備上物品。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">wield</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">wield [object]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">裝備上物品。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">hold</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">hold [object]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">裝備上物品。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">recite</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">recite [scroll]</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">recite [scroll] [victim]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">朗誦一張具有法術的捲軸。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">對某人朗誦一張具有法術的捲軸。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">quaff</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">quaff [potion]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">服用一瓶具有魔力的藥水。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">zap</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">zap</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">zap [victim]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">揮動魔杖以釋放出封存在魔杖中的法術。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">
+		對某人揮動魔杖以釋放出封存在魔杖中的法術。若是目標沒有指定，而且你又在戰鬥中，那麼目標就是你現在的對手。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">brandish</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">brandish</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">揮動著具有法力的物品。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">lock</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">lock [object / 
+		direction]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">使用鑰匙替容器或門上鎖。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">unlock</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">unlock [object / 
+		direction]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">使用鑰匙替容器或門解鎖。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">close</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">close [object / 
+		direction]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">打開容器或門。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">open</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">open [object / 
+		direction]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">關上容器或門。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">pick</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">pick [object / 
+		direction]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">習有開鎖(pick 
+		lock)後不靠鑰匙解鎖。 </font>
+		<p><font color="#C0C0C0" face="Verdana" size="2">【註】有些特定的容器和門無法撬開。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">inventory</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">inventory</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">列出身上所攜帶的物品。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">equipment</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">equipment</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">列出身上所裝備的物品。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">look</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">look</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">look [object / victim / direction]</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">look in [container]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">用來看你處在的房間的敘述、怪物、玩家。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">用來看指定物品 / 角色 / 方向的敘述。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">用來看容器內裝有的物品。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">examine</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">examine [container]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">用來看容器內裝有的物品。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">compare</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">compare [object]</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">compare [object1] [object2]</font></p>
+		<p>　</td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">將一物品和身上穿有的物品做比較。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">將一物品和另一物品做比較。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">【註】此指令不會詳細說明性質，且不同部位的裝備無法比較。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">eat</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">eat [object]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">吃一些可以吃的東西。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">drink</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">drink [object]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">喝一些可以喝的東西。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">fill</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">fill [object]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">在水源處旁把一個裝水的器皿裝滿水。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">list</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">list</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">list [object]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">列出商店中所有等待賣出的物品。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">列出商店中含有指定名稱等待賣出的物品。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">buy</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">buy [object]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">從商店那裏買下一個東西。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">sell</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">sell [object]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">賣出你想要賣給商店的東西。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">value</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">value [object]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">問老闆要以多少錢來買這件物品。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">forge</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">forge &lt;metal&gt; 
+		&lt;armor / weapon&gt; &lt;種類代碼&gt;</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">冶鍊，在四度空間的世界裏, 
+		存在著許許多多的礦物, 當你得到這類物質時，可以拿到商店內請老板將之冶鍊成為你想要的武器或防具，當然所冶鍊出來的成品品質和礦物有很大的關係, 
+		對於老板的辛勞，多少你也要付出金幣。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">loadmissile</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">load [bullet]</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">loadmissile &lt;bullet&gt; [gun]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">替裝備在手上的槍枝補充彈藥。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">替放在物品欄中的槍枝補充彈藥。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">unloadmissile</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">unloadmissile 
+		&lt;bullet&gt; [gun]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">將裝備在手上的槍枝取下彈藥到彈匣去。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">withdraw</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">withdraw [amount]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">將一定金額從銀行中領出。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">deposit</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">deposit [amount]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">將一定金額存放到銀行中。</font></td>
+	</tr>
+	<tr>
+		<td width="113"><font color="#C0C0C0" face="Verdana" size="2">auction</font></td>
+		<td width="202"><font color="#C0C0C0" face="Verdana" size="2">auction</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">auction id</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">auction stop</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">auction bet [amount]</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">auction [object] for [amount]</font></td>
+		<td width="437"><font color="#C0C0C0" face="Verdana" size="2">顯示拍賣物的基本資料。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">花底價 5% 的金額來得到物品的小道消息。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">拍賣的人可以在拍賣開始前中止拍賣。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">有拍賣時，出價一定的金額。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">以一定的金額為底價來拍賣你身上的物品。 </font></td>
+	</tr>
+	</table>
+	<p>　</p>
+	<table border="2" width="800" id="table10" bordercolorlight="#666699">
+	<tr>
+		<td><b><font size="4" face="Verdana" color="#99CCFF">○</font></b></td>
+		<td align="left" colspan="3">
+		<p align="left"><b><font size="4" face="Verdana" color="#99CCFF">&nbsp;資訊指令</font></b></td>
+	</tr>
+	<tr>
+		<td width="18" height="300" rowspan="37">
+		<div align="center">
+			　</div>
+		</td>
+		<td width="115" height="20"><b>
+		<font color="#FF0000" face="Verdana" size="2">指令</font></b></td>
+		<td height="20"><b><font face="Verdana" color="#FF0000" size="2">使用格式</font></b></td>
+		<td height="20"><b><font face="Verdana" color="#FF0000" size="2">說明</font></b></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">help</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">help</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">help [keyword]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">列出詳細列表。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">顯示出一頁有關這個 [keyword]的說明，[keyword] 
+		可以是所有在這遊戲中的指令、技能和法術。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">areas</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">areas</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">列出所有在這個遊戲中的地區。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">commands</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">commands</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">列出所有在這個遊戲中的指令。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">socials</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">socials</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">列出所有你可以用的社交動作。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">report</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">report</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">對同一房間內的玩家報告自己現在的狀況。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">score</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">score</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">score all</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">顯示出自己的簡略狀況。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">顯示出自己的詳細狀況。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">time</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">time</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">
+		列出遊戲中時間、遊戲啟動的時間，和架站主機現在的時間。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">weather</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">weather</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">顯示出遊戲中的天氣狀況。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">where</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">where</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">where [victim]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">顯示自己所在的區域。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">
+		顯示區域中某人所在的房間。但是若是你看不到對方或是對方處在潛行(sneak)的狀態下則無法得知。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">who</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">who</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">who -a</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">who -h</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">who -p</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">who -c</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">who -b</font></p>
+		<p>　</td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">查看線上所有玩家的精簡訊息。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">查看線上所有玩家的全部訊息。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">查看線上所有玩家的數量。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">查看線上所有玩家的封號。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">查看線上所有玩家的幫派。<br>
+		<br>
+		查看線上所有玩家的臭蟲報告點數。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">【註】若是你看不到對方，則查詢不到。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">channels</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">channels</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">channels +[channel]</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">channels -[channel]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">顯示出你目前各頻道的狀況。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">開啟某個頻道。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">關閉某個頻道。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">config</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">config</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">config +[option]</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">config -[option]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">顯示出你目前角色的設定。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">開啟某項設定。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">關閉某項設定。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">description</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">description</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">description [string]</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">description +[string]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">顯示出你目前角色的描述。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">寫下描述。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">加上一行描述。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">say</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">say [message]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">
+		發送訊息給同一個房間內的玩家。可以簡寫為「 ' 」。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">password</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">password [oldpass] 
+		[newpass]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">改變角色的密碼。 
+		第一個參數必須是你舊的密碼，而第二個參數必須是你新的密碼。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">title</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">title [string]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">設定你的稱號。自訂值不可超過 50 
+		個字元的長度。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">chat</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">chat [message]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">發送訊息給遊戲中所有的玩家。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">music</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">music [message]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">發送訊息給遊戲中不在睡眠狀態的玩家。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">question</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">question [message]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">發送訊息給遊戲中所有的玩家。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">answer</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">answer [message]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">發送訊息給遊戲中所有的玩家。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">shout</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">shout [message]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">發送訊息給遊戲中不在睡眠狀態的玩家。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">emote</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">emote [action]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">用來表達情緒或做動作。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">yell</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">yell [message]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">
+		發送訊息給同一個區域中不在睡眠狀態的玩家。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">prompt</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">prompt [string / 
+		all]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">其中 [string] 
+		可為任何字串或系統提供的參數。</font><p><font color="#C0C0C0" face="Verdana" size="2"><br>
+		系統提供的參數有:<br>
+　</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">%h : 顯示目前的生命力. %H : 顯示最大的生命力.<br>
+		%m : 顯示目前的精神力. %M : 顯示最大的精神力.<br>
+		%v : 顯示目前的移動力. %V : 顯示最大的移動力.<br>
+		%p : 顯示目前的內力. %P : 顯示最大的內力.<br>
+		%x : 顯示目前所得的經驗值.<br>
+		%a : 顯示目前的心地.<br>
+		%r : 顯示目前所在的房間名稱. <br>
+		%R : 顯示目前所在的區域代碼. (只有神族可顯示區域的代碼)<br>
+		%z : 顯示目前所在的區域名稱. (只有神族可顯示區域的名稱)<br>
+　</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">prompt all 則將顯示為 &lt;生命xxx 精神xxx 
+		移動xxx &gt; 的格式。<br>
+		<br>
+　</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">tell</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">tell [victim] 
+		[message]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">
+		發送訊息給一位不在睡眠狀態的人，不論他在那裡。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">beep</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">beep [victim]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">呼叫某人。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">pk</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">pk</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">pk join</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">pk bet [amount] [ID]</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">pk list</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">pk abort</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">顯示現在所發生 PK 中各玩家的數值。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">發起一場 PK 或加入 PK。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">押注一定金額在某位參賽者上。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">列出目前下注狀況。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">PK 的發起人，在沒有人接受挑戰時，可以放棄。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">typo</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">typo [message]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">
+		將訊息存入一個檔案中給大神觀看對MUD的。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">
+		但是，使用 NOTE 來傳遞訊息會比較容易，且較會被注意到。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">idea</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">idea [message]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">
+		將訊息存入一個檔案中給大神觀看對MUD的。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">
+		但是，使用 NOTE 來傳遞訊息會比較容易，且較會被注意到。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">bug</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">bug [message]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">
+		將訊息存入一個檔案中給大神觀看對MUD的。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">
+		但是，使用 NOTE 來傳遞訊息會比較容易，且較會被注意到。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">sing</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">sing [message]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">發送訊息給遊戲中不在睡眠狀態的玩家。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">honor</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">honor [victim]</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">honor all</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">命令某位官階比你低的玩家向你行禮。<br>
+　</font><p><font color="#C0C0C0" face="Verdana" size="2">命令同一房間內官階比你低的玩家向你行禮。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">spells</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">spells</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">spells all</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">spells [name]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">查詢目前可以學習的法術。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">查詢所有的法術。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">查詢某一法術的資訊。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">skills</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">skills</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">skills all</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">skills [name]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">查詢目前可以學習的技能。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">查詢所有的技能。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">查詢某一技能的資訊。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">wizlist</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">wizlist</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">列出遊戲中所有的大神。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">note</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">note</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">note list</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">note list [number]</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">note read [number]</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">note subject [string]</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">note to [victim / clan / all]</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">note + [string]</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">note show</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">note clear</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">note send</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">note post</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">note remove [number]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">閱讀未看的信件</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">列出最新的 50 封信件。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">列出從指定號碼開始的 50 封信件。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">閱讀指定編號的信件。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">替寫的信定主題。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">設定信件的收信人。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">把你想要寫的訊息加入信件中；一次一行的加入。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">列出已寫下的訊息。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">把所寫下的訊息清掉從頭開始。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">把寫好的信件寄送出去。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">把寫好的信件寄送出去。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">刪除指定編號的信件。</font></td>
+	</tr>
+	</table>
+	<p>　</p>
+	<table border="2" width="800" id="table11" bordercolorlight="#666699">
+	<tr>
+		<td><b><font size="4" face="Verdana" color="#99CCFF">○</font></b></td>
+		<td align="left" colspan="3">
+		<p align="left"><b><font size="4" face="Verdana" color="#99CCFF">&nbsp;戰鬥指令</font></b></td>
+	</tr>
+	<tr>
+		<td width="18" height="300" rowspan="18">
+		<div align="center">
+			　</div>
+		</td>
+		<td width="115" height="20"><b>
+		<font color="#FF0000" face="Verdana" size="2">指令</font></b></td>
+		<td height="20"><b><font face="Verdana" color="#FF0000" size="2">使用格式</font></b></td>
+		<td height="20"><b><font face="Verdana" color="#FF0000" size="2">說明</font></b></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">kill</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">kill [victim]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">對指定怪物發動普通攻擊。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">flee</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">flee</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">從戰鬥中逃離。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">cast</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">cast [name] 
+		[victim]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">對指定目標施展特定法術。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">wimpy</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">wimpy</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">wimpy [number]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">
+		設定你自己自動逃跑的生命值為生命值上限的 20%。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">
+		設定你自動逃跑的生命值。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">attack</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">attack</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">在戰鬥中發動普通攻擊。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">fist</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">fist [name] 
+		[victim]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">對指定目標施展特定拳法。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">slash</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">slash [name] 
+		[victim]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">對指定目標施展特定劍法。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">shoot</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">shoot</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">shoot [victim]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">射擊戰鬥中的對手。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">射擊指定目標。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">bs</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">bs [victim]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">對指定對手施展背刺。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">hunt</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">hunt</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">hunt [victim]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">解除獵殺。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">開始獵殺指定目標。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">buttock</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">buttock</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">在戰鬥中對敵人施展過肩摔。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">taigi</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">taigi</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">施展太極劍陣。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">hanging</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">hanging [victim]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">對指定目標施展絞殺。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">disarm</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">disarm</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">在戰鬥中擊落對手的武器。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">tenslice</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">tenslice</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">tenslice [victim]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">集氣。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">對指定目標施展十字斬。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">earthslice</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">earthslice [victim]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">對指定目標施展大地之斬。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">windslice</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">windslice [victim]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">對指定目標施展大地之斬。</font></td>
+	</tr>
+	</table>
+	<p>　</p>
+	<table border="2" width="800" id="table12" bordercolorlight="#666699">
+	<tr>
+		<td><b><font size="4" face="Verdana" color="#99CCFF">○</font></b></td>
+		<td align="left" colspan="3">
+		<p align="left"><b><font size="4" face="Verdana" color="#99CCFF">&nbsp;幫派指令</font></b></td>
+	</tr>
+	<tr>
+		<td width="18" height="300" rowspan="6">
+		<div align="center">
+			　</div>
+		</td>
+		<td width="115" height="20"><b>
+		<font color="#FF0000" face="Verdana" size="2">指令</font></b></td>
+		<td height="20"><b><font face="Verdana" color="#FF0000" size="2">使用格式</font></b></td>
+		<td height="20"><b><font face="Verdana" color="#FF0000" size="2">說明</font></b></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">cjoin</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">cjoin [number]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">準備加入指定幫派。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">chome</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">chome</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">回到幫派總壇。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">cwho</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">cwho</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">列出所有在線上與自己同一幫派的玩家。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">ctell</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">ctell [message]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">傳送訊息給幫派中的所有人。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">clan</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">clan</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">clan join [victim]</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">clan kick [victim]</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">clan baronize [victim]</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">clan chmaster [victim]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">列出現目前所有幫派。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">將某人加入幫派（幫主指令）</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">將某人踢出幫派（幫主指令）</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">設定某人的幫派職稱（幫主指令）</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">將幫主位置傳給某人（幫主指令，需有五人在場）</font></td>
+	</tr>
+	</table>
+	<p>　</p>
+	<table border="2" width="800" id="table13" bordercolorlight="#666699">
+	<tr>
+		<td><b><font face="Verdana" color="#99CCFF">○</font></b></td>
+		<td align="left" colspan="3">
+		<p align="left"><b><font face="Verdana" color="#99CCFF">&nbsp;其他指令</font></b></td>
+	</tr>
+	<tr>
+		<td width="18" height="300" rowspan="15">
+		<div align="center">
+			　</div>
+		</td>
+		<td width="115" height="20"><b>
+		<font color="#FF0000" face="Verdana" size="2">指令</font></b></td>
+		<td height="20"><b><font face="Verdana" color="#FF0000" size="2">使用格式</font></b></td>
+		<td height="20"><b><font face="Verdana" color="#FF0000" size="2">說明</font></b></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">!</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">!</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">重覆上一個你下的指令。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">save</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">save</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">儲存你的角色和物品資料。 
+		你必須要最少高於2級你才可以儲存。不管你有沒有儲存過，這個遊戲會在一段很短的時間內自動儲存。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">quit</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">quit</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">離開這個遊戲。quit 會自動做 
+		save 的動作，所以只要一個指令你就可以很安全的離開這個遊戲。雖然如此，若是在離開之前，能有SAVE的動作那會更安全。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">backup</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">backup</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">
+		這是用來備份自己檔案用的，在你做了什麼重要的事情之後最好能夠備份一下，這樣子才會確保你的檔案安全。如果不幸你的檔案毀損，你可以請求等級大於62級的大神幫你把檔案備份回來。在你等級大於五級時你才可以使用 
+		backup 這個指令。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">suicide</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">suicide [password]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">
+		用來清除自己檔案用的指令，所以要非常的小心。為了保險起見所以系統要求輸入密碼。若是密碼不對則你無法清除自己的檔案。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">pagelength</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">pagelength [number]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">設定可以連續輸出的內容長度。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">practice</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">practice</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">practive [name]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">列出目前你所有的技能及其熟練度。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">
+		增進指定技能的熟練度，但只能增進到某一個界限，若想要再提升這熟練度，則必需藉由不斷的使用。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">train</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">train</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">train [str | int | wis | dex | con]</font></p>
+		<p>　</p>
+		<p>　</td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">列出目前各屬性的訓練情形。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">訓練你某樣屬性能利用裝備所加的點數. </font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">【註】單一屬性訓練點數，最多能訓練到 8 
+		點。請參考屬性的設定的部份，可以知道各個屬性的用途。所能訓練的點數，總合不能超過 20 點。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">cancel</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">cancel skill [name]</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">cancel attr [str | int | wis | dex 
+		| con]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">
+		遺忘角色所學習的某樣技能，而遺忘掉某樣技能後，可將記憶點數退回，得以學習其他的技能。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">可以化去經由 train 
+		所屬性點數。但會降低你的技能熟練度，並且扣去一些經驗值。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">changebody</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">changebody [num num 
+		num num num]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">改變現有的體質。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">【註】不限等級，不限次數，但是除了由change 18 18 18 
+		18 18轉為其他體質之外，都會使你的技能熟練度降為九成。其中各項數值不得高於 22 或低於 14。且總合需為90。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">learn</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">learn [victim] 
+		[name]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">向指定怪物學習特定技能。</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">marry</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">marry</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">可以得到一些有關自己的結婚資料。 
+		</font>
+		<p><font color="#C0C0C0" face="Verdana" size="2">【註】其餘詳見結婚系統，或於遊戲中鍵入help marry</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">eqstock</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">eqstock list</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">eqstock save [object]</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">eqstock load [object / number]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">列出倉庫中所有裝備。</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">將指定物品存入倉庫中。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">將指定物品從倉庫中取出。</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">【註】此系列指令只能於 /4nwu 的風采裝備倉庫使用</font></td>
+	</tr>
+	<tr>
+		<td width="115"><font color="#C0C0C0" face="Verdana" size="2">allowip</font></td>
+		<td width="203"><font color="#C0C0C0" face="Verdana" size="2">allowip</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">allowip + [ip]</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">allowip - [ip]</font></td>
+		<td width="436"><font color="#C0C0C0" face="Verdana" size="2">可以看目前的設定情形</font><p>
+		<font color="#C0C0C0" face="Verdana" size="2">可以設定指定的位址為允許的</font></p>
+		<p><font color="#C0C0C0" face="Verdana" size="2">可以取消指定的位址</font></td>
+	</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

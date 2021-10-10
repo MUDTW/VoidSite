@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>area_left</title>
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+</head>
+
+<body bgcolor="#000000" onload="FP_preloadImgs(/*url*/'images/buttonDD.jpg', /*url*/'images/buttonDE.jpg', /*url*/'images/buttonE6.jpg', /*url*/'images/buttonE7.jpg', /*url*/'images/buttonE9.jpg', /*url*/'images/buttonEA.jpg', /*url*/'images/buttonEC.jpg', /*url*/'images/buttonED.jpg', /*url*/'images/buttonEF.jpg', /*url*/'images/buttonF0.jpg', /*url*/'images/buttonF2.jpg', /*url*/'images/buttonF3.jpg', /*url*/'images/buttonF5.jpg', /*url*/'images/buttonF6.jpg', /*url*/'images/buttonFA.jpg', /*url*/'images/buttonFB.jpg')">
+
+<div style="position: absolute; top: 0px; left: 0px; width: 250px; height: 50px">
+	<img border="0" src="images/back_down.jpg" width="250" height="50"></div>
+<p>　</p>
+<p>　</p>
+<table border="0" width="226" id="table1">
+	<tr>
+		<td height="102">
+		<p align="center">
+		<a target="right">
+		<img border="0" id="img4" src="images/buttonDC.jpg" height="20" width="100" alt="Map1現代大陸" fp-style="fp-btn: Braided Column 4; fp-font: 華康儷中黑(P); fp-font-color-normal: #C0C0C0; fp-font-color-hover: #FFFFFF; fp-font-color-press: #FFFFFF; fp-bgcolor: #000000" fp-title="Map1現代大陸" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttonDD.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttonDC.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'images/buttonDE.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'images/buttonDD.jpg')"></a><p align="center">
+		<a target="right">
+		<img border="0" id="img8" src="images/buttonE5.jpg" height="20" width="100" alt="Map2東方大陸" onmouseover="FP_swapImg(1,0,/*id*/'img8',/*url*/'images/buttonE6.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img8',/*url*/'images/buttonE5.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img8',/*url*/'images/buttonE7.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img8',/*url*/'images/buttonE6.jpg')" fp-style="fp-btn: Braided Column 4; fp-font: 華康儷中黑(P); fp-font-color-normal: #C0C0C0; fp-font-color-hover: #FFFFFF; fp-font-color-press: #FFFFFF; fp-bgcolor: #000000" fp-title="Map2東方大陸"></a><p align="center">
+		<a target="right">
+		<img border="0" id="img9" src="images/buttonE8.jpg" height="20" width="100" alt="Map3西方大陸" onmouseover="FP_swapImg(1,0,/*id*/'img9',/*url*/'images/buttonE9.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img9',/*url*/'images/buttonE8.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img9',/*url*/'images/buttonEA.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img9',/*url*/'images/buttonE9.jpg')" fp-style="fp-btn: Braided Column 4; fp-font: 華康儷中黑(P); fp-font-color-normal: #C0C0C0; fp-font-color-hover: #FFFFFF; fp-font-color-press: #FFFFFF; fp-bgcolor: #000000" fp-title="Map3西方大陸"></a><p align="center">
+		<a target="right">
+		<img border="0" id="img10" src="images/buttonEB.jpg" height="20" width="100" alt="Map4太空世界" onmouseover="FP_swapImg(1,0,/*id*/'img10',/*url*/'images/buttonEC.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img10',/*url*/'images/buttonEB.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img10',/*url*/'images/buttonED.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img10',/*url*/'images/buttonEC.jpg')" fp-style="fp-btn: Braided Column 4; fp-font: 華康儷中黑(P); fp-font-color-normal: #C0C0C0; fp-font-color-hover: #FFFFFF; fp-font-color-press: #FFFFFF; fp-bgcolor: #000000" fp-title="Map4太空世界"></a><p align="center">
+		<a target="right">
+		<img border="0" id="img12" src="images/buttonF1.jpg" height="20" width="100" alt="故事老人系列" onmouseover="FP_swapImg(1,0,/*id*/'img12',/*url*/'images/buttonF2.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img12',/*url*/'images/buttonF1.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img12',/*url*/'images/buttonF3.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img12',/*url*/'images/buttonF2.jpg')" fp-style="fp-btn: Braided Column 4; fp-font: 華康儷中黑(P); fp-font-color-normal: #C0C0C0; fp-font-color-hover: #FFFFFF; fp-font-color-press: #FFFFFF; fp-bgcolor: #000000" fp-title="故事老人系列"></a><p align="center">
+		<a target="right">
+		<img border="0" id="img13" src="images/buttonF4.jpg" height="20" width="100" alt="白霧之都系列" onmouseover="FP_swapImg(1,0,/*id*/'img13',/*url*/'images/buttonF5.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img13',/*url*/'images/buttonF4.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img13',/*url*/'images/buttonF6.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img13',/*url*/'images/buttonF5.jpg')" fp-style="fp-btn: Braided Column 4; fp-font: 華康儷中黑(P); fp-font-color-normal: #C0C0C0; fp-font-color-hover: #FFFFFF; fp-font-color-press: #FFFFFF; fp-bgcolor: #000000" fp-title="白霧之都系列"></a><p align="center">
+		<a target="right">
+		<img border="0" id="img11" src="images/buttonEE.jpg" height="20" width="100" alt="Smangel區域" onmouseover="FP_swapImg(1,0,/*id*/'img11',/*url*/'images/buttonEF.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img11',/*url*/'images/buttonEE.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img11',/*url*/'images/buttonF0.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img11',/*url*/'images/buttonEF.jpg')" fp-style="fp-btn: Braided Column 4; fp-font: 華康儷中黑(P); fp-font-color-normal: #C0C0C0; fp-font-color-hover: #FFFFFF; fp-font-color-press: #FFFFFF; fp-bgcolor: #000000" fp-title="Smangel區域"></a><p align="center">
+		<a target="right">
+		<img border="0" id="img14" src="images/buttonF9.jpg" height="20" width="100" alt="區域寫作說明" onmouseover="FP_swapImg(1,0,/*id*/'img14',/*url*/'images/buttonFA.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img14',/*url*/'images/buttonF9.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img14',/*url*/'images/buttonFB.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img14',/*url*/'images/buttonFA.jpg')" fp-style="fp-btn: Braided Column 4; fp-font: 華康儷中黑(P); fp-font-color-normal: #C0C0C0; fp-font-color-hover: #FFFFFF; fp-font-color-press: #FFFFFF; fp-bgcolor: #000000" fp-title="區域寫作說明"></a></td>
+	</tr>
+</table>
+
+</body>
+
+</html>
